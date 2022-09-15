@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(60, 104, 170);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-box{
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+}
