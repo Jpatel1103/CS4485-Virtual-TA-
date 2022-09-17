@@ -1,10 +1,24 @@
 ---
+---
 name: Task
-about: Issue About Task
+about: Issues For Tasdk
 title: ''
 labels: Task
-assignees: Jpatel1103
+assignees: 
 
 ---
 
-Please enter the issue here:
+### Title
+*
+### Feature
+*
+### Description
+*
+###  Acceptance Criteria
+*
+### Definition of Ready
+*
+### Definition of Done
+*
+### Technical Requirements
+*
