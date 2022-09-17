@@ -1,14 +1,14 @@
 ---
 name: Story
-about: The Proposed story is here
+about: Issue For Story
 title: ''
-labels: ''
+labels: Story
 assignees: ''
 
 ---
 
 ### Title
-* Front-End Website
+*
 ### Feature
 *
 ### Description
