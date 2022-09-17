@@ -2,8 +2,8 @@
 name: Story
 about: Issue For Story
 title: ''
-labels: Story
-assignees: ''
+labels: Story, Task
+assignees: Jpatel1103
 
 ---
 
