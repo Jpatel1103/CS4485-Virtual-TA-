@@ -1,7 +1,7 @@
 ---
 ---
 name: Task
-about: Issues For Tasdk
+about: Issues For Task
 title: ''
 labels: Task
 assignees: 
