@@ -1,9 +1,9 @@
 ---
-name: Story
-about: Issue For Story
+name: Task
+about: Issue in Task
 title: ''
-labels: Story
-assignees: Jpatel1103
+labels: Task
+assignees: ''
 
 ---
 
