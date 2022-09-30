@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {"tag":  "greeting",
+      "patterns":  ["Hi", "How are you", "Hello", "What's up", "Hey"],
+      "responses": ["Hello!", "Hi, how can I help you today?", "Hey there!"],
+      "context_set": ""
+    },
+    {"tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you later"],
+      "responses": ["Thanks for chatting!", "Bye-bye!"],
+      "context": [""]
+    },
+    {"tag": "help",
+      "patterns": ["I need help", "can you help me", "Can I ask you a question?", "Help me"],
+      "responses": ["Yes please ask, and I can see whether I can help", "How can I help?"],
+      "context": [""]
+    },
+    {"tag": "thanks",
+      "patterns": ["Thanks", "Thank you","thankyou", "That's helpful", "Awesome, thanks", "great"],
+      "responses": ["Happy to help!", "Anytime!","You're welcome", "My pleasure"],
+      "context": [""]
+    },
+    {"tag": "noanswer",
+      "patterns": [""],
+      "responses": ["Sorry, I didn't understand you", "Do you have any more info?", "I'm not sure I understand"],
+      "context": [""]
+    },
+    {"tag": "name",
+      "patterns": ["what's your name?","who are you?"],
+      "responses": ["I'm your virtual-TA chatbot","I'm your chatbot"],
+      "context": [""]
+    }
+  ]
+}
