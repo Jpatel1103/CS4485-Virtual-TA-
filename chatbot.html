@@ -6,43 +6,33 @@
 <!--<title>Chat-Box</title>-->
     <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/font-awesome.min.css">
-
 </head>
 <title> Basic ChatBot </title>
 <body>
     <div class="container">
-        <div id="chatbot" class="chat-box">
+        <div class="chat-box">
             <div class ="upper-border">
-                <img src="bot.png" alt="bot-icon" />
+                <img src="resources/bot.png" alt="bot-icon" />
                 <div class="border-info">
                     <h2>Algo Bot</h2>
                 </div>
             </div>
-   <form>
- <div class ="chat-input">
-<input type ="text" class="msg" placeholder ="Enter Message"/>
-<input type="image" class="sbt" name="submit" src="send.png" height="75" width="80"/>
-</div>
-</form>
-  <div class ="chat-popup">
-                        <input type="button" value="X" onclick="windowClose();">
+            <div class ="chat-input">
+                <input type ="text" placeholder ="Enter Message"/>
+                <button class = "send-button">
+                    <img src="resources/send.png" alt="send-button">
+
+                </button>
+            </div>
         </div>
-</div>
 
-        <div class="activate-bot">
-<input type="image" class="abot" img src="Message.png" alt="btn" onclick="openBot()"/>
-</div>
-<script>
-function openBot()
-{
-document.getElementById("chatbot").style.display = "block";
-}
-function windowClose()
-{
-document.getElementById("chatbot").style.display = "none";
-}
+        <div class="pop-up-button">
+            <img src="resources/pop-up.png">
+        </div>
 
-</script>
+  </div>
+  <script src ="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
