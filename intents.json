@@ -12,7 +12,7 @@
     },
     {"tag": "help",
       "patterns": ["I need help", "can you help me", "Can I ask you a question?", "Help me"],
-      "responses": ["Yes please ask, and I can see whether I can help", "How can I help?"],
+      "responses": ["Yes please ask, and I can see whether I can help", "How can I help?", "What can I help you with?"],
       "context": [""]
     },
     {"tag": "thanks",
@@ -28,6 +28,17 @@
     {"tag": "name",
       "patterns": ["what's your name?","who are you?"],
       "responses": ["I'm your virtual-TA chatbot","I'm your chatbot"],
+      "context": [""]
+    },
+    {"tag": "officehours",
+      "patterns": ["When are office hours?","When can I access Professor outside of class?"],
+      "responses": ["Office Hours are M/W from 12:30-2:00pm","Professor has office hours from 12:30-2:00pm M/W"],
+      "context": [""]
+    },
+    {"tag": "email",
+      "patterns": ["What is the Professor's email?","How can I get in contact with the Professor?"],
+      "responses": ["You can reach out to the Professor via email at professor@utdallas.edu",
+        "The Professor's email is professor@utdallas.edu", "You can send the Professor an email at professor@utdallas.edu"],
       "context": [""]
     }
   ]
