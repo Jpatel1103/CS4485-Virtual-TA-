@@ -19,7 +19,14 @@ body{
     background-color: white;
     border-radius: 20px;
     position: absolute;
-    display: none;
+    display:none;
+}
+
+.message-box{
+    margin-top: 10px;
+    height: 350px;
+    position: relative;
+    overflow-y: auto;
 }
 
 .upper-border{
@@ -45,6 +52,30 @@ body{
 }
 .border-info p{
     font:bold;
+    font-size: 0.5cm;
+}
+
+.client-chat{
+    width: 35%;
+    word-wrap: break-word;
+    background-color: grey;
+    padding: 7px 30px;
+    border-radius: 10px 10px 10px 0;
+    margin: 20px 40px;
+    position: relative;
+    font-family: arial;
+    font-size: 0.5cm;
+}
+
+.my-chat{
+    width: 35%;
+    word-wrap: break-word;
+    background-color: rgb(130, 198, 243);
+    padding: 7px 30px;
+    border-radius: 10px 10px 0px 10px;
+    margin: 0px 40px 20px auto;
+    position: relative;
+    font-family: arial;
     font-size: 0.5cm;
 }
 
