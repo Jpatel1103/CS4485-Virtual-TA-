@@ -86,4 +86,40 @@ export class AppComponent implements OnInit {
    scrollToBottom() {
     this.container.nativeElement.scrollTop = this.container.nativeElement.scrollHeight;
 }
+
+const ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value="O(1)";
+}
+const1 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value="O(logn)";
+}
+const2 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value="O(n)";
+}
+const3 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value="O(nlogn)";
+}
+const4 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value="O(n*n)";
+}
+const5 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value="O(n*n*n)";
+}
+const6 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value="O(n!)";
+}
 }
