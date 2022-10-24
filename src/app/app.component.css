@@ -1,154 +1,199 @@
 .main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: rgba(21, 84, 156);
-}
-
-.container{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.chat-box{
-  align-items: center;
-  width: 1000px;
-  height: 600px;
-  background-color: white;
-  border-radius: 20px;
-  position: absolute;
-  display: hidden;
-  overflow: hidden;
-  
-}
-.message-box{
-  margin-top: 10px;
-  height: 350px;
-  position: relative;
-  overflow-y: auto;
-}
-
-.upper-border{
-  border-radius:15px 15px 0px 0px;
-  padding: 20px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  height: 80px;
-  background: rgb(130, 198, 243);
-}
-
-.upper-border img{
-  margin-left: 10px;
-  width:100px;
-  height: 100px;
-}
-
-.border-info{
-  padding: 30px;
-  font:lighter;
-  font-size: 0.6cm;
-}
-.border-info p{
-  font:bold;
-  font-size: 0.5cm;
-}
-
-.client-chat{
-  width: 35%;
-  word-wrap: break-word;
-  background-color: grey;
-  padding: 7px 30px;
-  border-radius: 10px 10px 10px 0;
-  margin: 20px 40px;
-  position: relative;
-  font-family: arial;
-  font-size: 0.5cm;
-}
-
-.my-chat{
-  width: 35%;
-  word-wrap: break-word;
-  background-color: rgb(130, 198, 243);
-  padding: 7px 30px;
-  border-radius: 10px 10px 0px 10px;
-  margin: 0px 40px 20px auto;
-  position: relative;
-  font-family: arial;
-  font-size: 0.5cm;
-}
-
-.chat-input{
-  display:flex;
-  align-items: center;
-  width:98%;
-  height:100px;
-  padding: 15px;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;  
-
-}
-
-.chat-input input{
-  width: calc(100% - 40px);
-  height: 80px;
-  border-radius: 20px;
-  background-color: rgb(228, 227, 227);
-  padding: 0 15px;
-  font-size:0.8cm;
-}
-
-.send-button{
-  margin-left: 20px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: none;
-  background-color: transparent;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-.send-button:active{
-  transform: scale(0.85);
-}
-.send-button img{
-  width: 100%;
-  height: 100%
-}
-.pop-up-button{
-  width: 70px;
-  height: 70px;
-  padding: 2px;
-  border-radius: 50%;
-  background-color: white;
-  cursor: pointer;
-  overflow: hidden;
-  position:relative;
-  left: 550px;
-  top: 340px;
-}
-
-.pop-up-button img{
-  width: 95%;
-  height: 95%;
-  padding: 1px;
-  border-radius: 50%;
-  position: relative;
-  transition: 0.5s ease-in-out;
-}
-
-.pop-up-button:hover img{
-  animation: rotation 2s infinite linear alternate;
-}   
-@keyframes rotation {
-  to {
-    transform: rotate(360deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(21, 84, 156);
   }
+  
+  .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chat-box{
+    align-items: center;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    display: hidden;
+    overflow: hidden;
+    
+  }
+  .message-box{
+    margin-top: 10px;
+    height: 350px;
+    position: relative;
+    overflow-y: auto;
+  }
+  
+  .upper-border{
+    border-radius:15px 15px 0px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    background: rgb(130, 198, 243);
+  }
+  
+  .upper-border img{
+    margin-left: 10px;
+    width:100px;
+    height: 100px;
+  }
+  
+  .border-info{
+    padding: 30px;
+    font:lighter;
+    font-size: 0.6cm;
+  }
+  .border-info p{
+    font:bold;
+    font-size: 0.5cm;
+  }
+  
+  .client-chat{
+    width: 35%;
+    word-wrap: break-word;
+    background-color: grey;
+    padding: 7px 30px;
+    border-radius: 10px 10px 10px 0;
+    margin: 20px 40px;
+    position: relative;
+    font-family: arial;
+    font-size: 0.5cm;
+  }
+  
+  .my-chat{
+    width: 35%;
+    word-wrap: break-word;
+    background-color: rgb(130, 198, 243);
+    padding: 7px 30px;
+    border-radius: 10px 10px 0px 10px;
+    margin: 0px 40px 20px auto;
+    position: relative;
+    font-family: arial;
+    font-size: 0.5cm;
+  }
+  
+  .chat-input{
+    display:flex;
+    align-items: center;
+    padding-left: 10px;
+    width:90%;
+    height:100px;
+    margin-left: 100px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;  
+  
+  }
+  
+  .chat-input input{
+    width: calc(100% - 40px);
+    height: 80px;
+    border-radius: 20px;
+    background-color: rgb(228, 227, 227);
+    font-size:0.8cm;
+  }
+  
+  .send-button{
+    margin-left: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  .send-button:active{
+    transform: scale(0.85);
+  }
+  .send-button img{
+    width: 100%;
+    height: 100%
+  }
+  .pop-up-button{
+    width: 70px;
+    height: 70px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position:relative;
+    left: 550px;
+    top: 340px;
+  }
+
+.dropup
+{
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
+
+  .eqclick
+  {
+      background-color: transparent;
+      border: none;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      bottom: 0;
+      margin-left: 0px;
+      margin-bottom: 5px;
+      overflow: hidden;
+  }
+   .eqclick img
+   {
+       width: 100%;
+       height: 100%;
+   }
+   .whole:hover .dropup {
+    display: block;
+  }
+  .dropup a
+  {
+  color: black;
+  padding: 2px 2px;
+  text-decoration: none;
+  display: block;
+  }
+
+  .dropup a:hover
+  {
+    background-color: #ccc
+  }
+
+  .pop-up-button img{
+    width: 95%;
+    height: 95%;
+    padding: 1px;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .pop-up-button:hover img{
+    animation: rotation 2s infinite linear alternate;
+  }   
+  @keyframes rotation {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
