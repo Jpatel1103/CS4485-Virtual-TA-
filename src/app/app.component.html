@@ -12,7 +12,7 @@
                     <div class="client-chat">Hi!</div>
                 </div>
             </div>
-            <form (ngSubmit) ="sendButton()" id="send" class="chat-input">
+            <form (ngSubmit) ="handleUserMessage(message)" id="send" class="chat-input" autocomplete="off">
                 <input [(ngModel)]= "message" name="message" type="text" placeholder="Enter Message" />
                 <button (click) = "scrollToBottom()" type="submit" class="send-button">
                     <img src="../assets/image/send.png" alt="send-button">
@@ -21,7 +21,7 @@
             </form>
         </div>
 
-        <button (click)="animated = !animated" class="pop-up-button">
+        <button (click)="animated = !animated" class="pop-up-button" id="check">
             <img src="../assets/image/pop-up.png">
         </button>
 

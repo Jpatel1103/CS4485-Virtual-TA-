@@ -18,6 +18,10 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "actions-on-google": "^2.14.0",
+    "cors": "^2.8.5",
+    "dialogflow": "^1.2.0",
+    "dialogflow-fulfillment": "^0.6.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -28,6 +32,7 @@
     "@angular/compiler-cli": "^14.2.0",
     "@types/jasmine": "~4.0.0",
     "@types/jquery": "^3.5.14",
+    "api-ai-javascript": "^2.0.0-beta.21",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
