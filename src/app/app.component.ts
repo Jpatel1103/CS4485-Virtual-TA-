@@ -1,5 +1,7 @@
-import { Component, OnInit, Renderer2, ElementRef, ViewChild, } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef, ViewChild, Directive, } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
+const dialogflowURL = 'https://YOUR-CLOUDFUNCTION/dialogflowGateway';
 
 @Component({
   selector: 'app-root',
@@ -21,24 +23,66 @@ import { animate, style, transition, trigger } from '@angular/animations';
 export class AppComponent implements OnInit {
   animated : boolean = false;
   message : string ="";
+  loading : boolean = false;
   @ViewChild('container') container!: ElementRef;
-  ngOnInit(){
-  }
-  constructor(private renderer : Renderer2){
+  sessionId = Math.random().toString(36).slice(-5);
 
+  constructor(private http: HttpClient,private renderer : Renderer2) { }
+
+  ngOnInit() {
+    this.addBotMessage('Hi, how can I help you?');
   }
 
-  sendButton(){
-    if(this.message != ""){
+  handleUserMessage(msg: string) {
+    if(msg !=""){
+    this.addUserMessage(msg);
+
+    this.loading = true;
+
+    // Make the request 
+    this.http.post<any>(
+      dialogflowURL,
+      {
+        sessionId: this.sessionId,
+        queryInput: {
+          text: {
+            msg,
+            languageCode: 'en-US'
+          }
+        }
+      }
+    )
+    .subscribe(res => {
+      const { fulfillmentText } = res;
+      this.addBotMessage(fulfillmentText);
+      this.loading = false;
+    });
+  }
+}
+
+  addUserMessage(msg: string) {
+      this.message = msg;
+      const el = this.renderer.createElement("div");
+      this.renderer.addClass(el,"my-chat");
+      const text = this.renderer.createText(this.message);
+      this.renderer.appendChild(el,text);
+      const messagebox = document.getElementById("message-box");
+      messagebox?.appendChild(el);
+      this.message="";
+  }
+
+  addBotMessage(msg: string) {
+    this.message = msg;
     const el = this.renderer.createElement("div");
-    this.renderer.addClass(el,"my-chat");
+    this.renderer.addClass(el,"client-chat");
     const text = this.renderer.createText(this.message);
     this.renderer.appendChild(el,text);
     const messagebox = document.getElementById("message-box");
     messagebox?.appendChild(el);
     this.message="";
-    }
   }
+
+
    scrollToBottom() {
     this.container.nativeElement.scrollTop = this.container.nativeElement.scrollHeight;
 }
