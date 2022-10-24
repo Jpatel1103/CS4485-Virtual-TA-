@@ -12,6 +12,34 @@
                     <div class="client-chat">Hi!</div>
                 </div>
             </div>
+          <div class="whole">
+              <button class="eqclick">
+                <img src="../assets/notation.png">
+                </button>
+                <div class="dropup">
+                <button id="btn1" (click)="const()" style="border: none;"> 
+                <a href="#" id="constant"> O(1) </a><br>
+                </button><br>
+                <button id="btn2" (click)="const1()" style="border: none;">
+                <a href="#" id="log"> O(log n)</a><br>
+            </button><br>
+                <button id="btn3" (click)="const2()" style="border: none;">
+                <a href="#" id="lin"> O(n) </a><br>
+            </button><br>
+            <button id="btn4" (click)="const3()" style="border: none;">
+                <a href="#" id="lina"> O(n log n)</a><br>
+            </button><br>
+            <button id="btn5" (click)="const4()" style="border: none;">
+                <a href="#" id="quad"> O(n*n) </a><br>
+            </button><br>
+            <button id="btn6" (click)="const5()" style="border: none;">
+                <a href="#" id="cubic"> O(n*n*n)</a><br>
+            </button><br>
+            <button id="btn7" (click)="const6()" style="border: none;">
+                <a href="#" id="fact"> O(n!) </a><br>
+            </button><br>
+            </div>
+              </div>
             <form (ngSubmit) ="handleUserMessage(message)" id="send" class="chat-input" autocomplete="off">
                 <input [(ngModel)]= "message" name="message" type="text" placeholder="Enter Message" />
                 <button (click) = "scrollToBottom()" type="submit" class="send-button">
