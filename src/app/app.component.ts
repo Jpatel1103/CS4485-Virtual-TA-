@@ -1,7 +1,5 @@
-import { Component, OnInit, Renderer2, ElementRef, ViewChild, Directive, } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef, ViewChild, Directive, Input, } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
-import { HttpClient } from '@angular/common/http';
-const dialogflowURL = 'https://YOUR-CLOUDFUNCTION/dialogflowGateway';
 
 @Component({
   selector: 'app-root',
@@ -27,13 +25,19 @@ export class AppComponent implements OnInit {
   @ViewChild('container') container!: ElementRef;
   sessionId = Math.random().toString(36).slice(-5);
 
-  constructor(private http: HttpClient,private renderer : Renderer2) { }
+  title = 'ChatBot';
+  colorBackRight: string = '#007bff';
+  colorFontRight: string = '#ffffff';
+  colorBackLeft: string = '#eeeeee';
+  colorFontLeft: string = '#343a40';
+  messages = [];
+
+  //constructor(private http: HttpClient,private renderer : Renderer2) { }
 
   ngOnInit() {
-    this.addBotMessage('Hi, how can I help you?');
+    //this.addBotMessage('Hi, how can I help you?');
   }
-
-  handleUserMessage(msg: string) {
+  /*handleUserMessage(msg: string) {
     if(msg !=""){
     this.addUserMessage(msg);
 
@@ -60,7 +64,7 @@ export class AppComponent implements OnInit {
   }
 }
 
-  addUserMessage(msg: string) {
+  /*addUserMessage(msg: string) {
       this.message = msg;
       const el = this.renderer.createElement("div");
       this.renderer.addClass(el,"my-chat");
@@ -121,5 +125,5 @@ const6 ()
 {
   var message1=document.getElementById("ms") as HTMLInputElement;
   message1.value="O(n!)";
-}
+}*/
 }

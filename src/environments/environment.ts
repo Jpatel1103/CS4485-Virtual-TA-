@@ -3,9 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false, dialogflow: {
+  production: false, 
+  firstName: 'virtual-ta',
+  dialogflow: {
     projectId:'virtual-ta-csjh'
-  }
+  },
+  backend: {
+    baseUrl: "http://localhost:3000/",
+    apiUrl: "http://localhost:3000/api",
+    requestTextUrl:"http://localhost:3000/api/requestText/"
+    }
 };
 
 /*

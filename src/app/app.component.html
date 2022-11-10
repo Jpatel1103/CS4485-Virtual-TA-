@@ -7,7 +7,9 @@
                     <h2>Algo Bot</h2>
                 </div>
             </div>
-            <div class="message-box" id = "message-box" #container >    
+            <app-chat [messages]="messages" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
+            [colorBackLeft]="colorBackLeft" [colorFontLeft]="colorFontLeft" class="center"></app-chat>
+            <!--<div class="message-box" id = "message-box" #container >    
                 <div class="message">
                     <div class="client-chat">Hi!</div>
                 </div>
@@ -46,7 +48,7 @@
                     <img src="../assets/image/send.png" alt="send-button">
 
                 </button>
-            </form>
+            </form>-->
         </div>
 
         <button (click)="animated = !animated" class="pop-up-button" id="check">

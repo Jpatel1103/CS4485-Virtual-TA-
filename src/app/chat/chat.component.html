@@ -1,0 +1,13 @@
+<div class="list-messages">
+    <div *ngFor="let message of messages" class="message-container">
+      <app-message class="message" [text]="message.text" [date]="message.date" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
+      [colorBackLeft]="colorBackLeft" [colorFontLeft]="colorFontLeft" [owner]="message.userOwner"
+      [ngClass]="{'left-message': !message.userOwner, 'right-message': message.userOwner}"></app-message>
+    </div>
+  </div>
+  <div class="input-message form-group">
+    <textarea class="input-text-message form-input" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"></textarea>
+    <button [disabled]="!textInput" class="input-send" (click)="sendMessage()">
+      <img src="../assets/image/send.png" alt="send-button">
+    </button>
+  </div>  
