@@ -1,6 +1,6 @@
-<div class="list-messages">
+<div class="list-messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
     <div *ngFor="let message of messages" class="message-container">
-      <app-message class="message" [text]="message.text" [date]="message.date" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
+      <app-message class="message"  [text]="message.text" [date]="message.date" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
       [colorBackLeft]="colorBackLeft" [colorFontLeft]="colorFontLeft" [owner]="message.userOwner"
       [ngClass]="{'left-message': !message.userOwner, 'right-message': message.userOwner}"></app-message>
     </div>

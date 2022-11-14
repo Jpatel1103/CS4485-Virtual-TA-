@@ -4,6 +4,7 @@ import { Message } from '../model/message.model';
 import { TextMessage } from '../model/text-message.model';
 import { ResponseMessage } from '../model/response-message.model';
 import { environment } from 'src/environments/environment';
+import { delay } from 'rxjs';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
@@ -39,20 +40,19 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit() {
-
-
   }
 
   sendMessage(){
     if (this.textInput != ''){
-    let newMessage: Message = { text: this.textInput, date: this.now, userOwner: true};
+    let newMessage: Message = {text: this.textInput, date: this.now, userOwner: true, name: "User"};
     this.messages.push(newMessage);
 
     let messageBack: TextMessage = { "firstname": environment.firstName, "text": this.textInput}
     if(this.BACK_ENABLED){
       this.chatService.sendMessage(messageBack)
       .subscribe((res: ResponseMessage) => {
-        let messageReturn: Message = { text: res.responseMessage, date: this.now, userOwner: false}
+        let messageReturn: Message = { text: res.responseMessage, date: this.now, userOwner: false, name: "Bot"}
+        delay(5000);
         this.messages.push(messageReturn);
 
       });

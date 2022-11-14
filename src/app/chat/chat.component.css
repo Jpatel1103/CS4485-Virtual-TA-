@@ -2,7 +2,7 @@
     margin-top: 10px;
     height: 350px;
     position: relative;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
   .left-message {
     display: flex;

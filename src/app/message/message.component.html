@@ -1,4 +1,5 @@
 <div *ngIf="owner" class="content-message right-content">
+    <img id = "userAvatar" src="../assets/image/user.png" />
     <p [ngStyle]="{'background-color': colorBackRight, 'color': colorFontRight}">
         {{text}}
     </p>
@@ -7,10 +8,18 @@
     </div>
 </div>
 <div *ngIf="!owner" class="content-message left-content">
+    <img id = "botAvatar" src="../assets/image/ta.png" />
     <p [ngStyle]="{'background-color': colorBackLeft, 'color': colorFontLeft}">
         {{text}}
     </p>
     <div class ="date">
-        {{date}}
+        {{date}} 
     </div>
+    <!--<div *ngIf="!owner"class="typingIndicatorContainer" id = "indicator">
+        <div class="typingIndicatorBubble">
+          <div class="typingIndicatorBubbleDot"></div>
+          <div class="typingIndicatorBubbleDot"></div>
+          <div class="typingIndicatorBubbleDot"></div>
+        </div>
+      </div>-->
 </div>

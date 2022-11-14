@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ChatService } from '../chat/chat.service';
 
 @Component({
   selector: 'app-message',
@@ -15,13 +16,11 @@ export class MessageComponent implements OnInit {
   @Input('colorBackLeft') colorBackLeft: string;
   @Input('colorFontLeft') colorFontLeft: string;
 
-  constructor(){
-
-
+  constructor(private svc : ChatService){ 
   }
 
   ngOnInit(): void{
-    
   }
+
 
 }
