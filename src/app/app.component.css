@@ -25,13 +25,6 @@
     overflow: hidden;
     
   }
-  /*.list-messages{
-    margin-top: 10px;
-    height: 350px;
-    position: relative;
-    overflow-y: auto;
-  }*/
-  
   .upper-border{
     border-radius:15px 15px 0px 0px;
     padding: 20px;
@@ -135,23 +128,24 @@
     top: 340px;
   }
 
-.dropup
-{
-  display: none;
-  position: absolute;
-  bottom: 50px;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  .dropup
+  {
+  display: hidden;
+  position:absolute; 
+  min-width: 100px;
+  background-color: #efefef;
+  margin-left: 30px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-}
+  }
 
-  .eqclick 
+  .eqclick  
   {
-      background-color: black;
       border: none;
+      background-color: white;
       width: 30px;
       height: 30px;
+      padding: 0px;
       position: absolute;
       border-radius: 50%;
       bottom: 0px;
@@ -160,17 +154,13 @@
       cursor:pointer;
   }
 
-  .eqclick:hover .dropup{
-    display:block;
-  }
    .eqclick img
    {
-       width: 100%;
-       height: 100%;
+    position: relative;
+       width: 95%;
+       height: 95%;
    }
-   .whole:hover .dropup {
-    display: block;
-  }
+
   .dropup a
   {
   color: black;
@@ -179,16 +169,16 @@
   display: block;
   }
   .whole {
-    display:flex;
+    display:inline-block;
     align-items: center;
     padding-left: 0px;
-    width:100%;
-    height:30px;
+    width:20%;
+    height:50%;
     margin-left: 0px;
+    vertical-align: top;
     overflow: hidden;
     position: absolute;
     bottom: 100px;
-    background-color: blue;
   }
   .dropup a:hover
   {

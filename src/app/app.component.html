@@ -13,12 +13,12 @@
                 <div class="message">
                     <div class="client-chat">Hi!</div>
                 </div>
-            </div>
+            </div>-->
           <div class="whole">
-              <button class="eqclick">
-                <img src="../assets/image/notation.png">
+              <button (click)="dropup = !dropup" class="eqclick">
+                <img src="../assets/image/formula.png">
                 </button>
-                <div class="dropup">
+                <div *ngIf= "dropup"class="dropup">
                 <button id="btn1" (click)="const()" style="border: none;"> 
                 <a href="#" id="constant"> O(1) </a><br>
                 </button><br>
@@ -42,7 +42,7 @@
             </button><br>
             </div>
               </div>
-            <form (ngSubmit) ="handleUserMessage(message)" id="send" class="chat-input" autocomplete="off">
+           <!---- <form (ngSubmit) ="handleUserMessage(message)" id="send" class="chat-input" autocomplete="off">
                 <input [(ngModel)]= "message" name="message" type="text" placeholder="Enter Message" />
                 <button (click) = "scrollToBottom()" type="submit" class="send-button">
                     <img src="../assets/image/send.png" alt="send-button">

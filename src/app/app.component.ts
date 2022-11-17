@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   animated : boolean = false;
   message : string ="";
   loading : boolean = false;
+  dropup: boolean = false;
   @ViewChild('container') container!: ElementRef;
   sessionId = Math.random().toString(36).slice(-5);
 
@@ -89,7 +90,7 @@ export class AppComponent implements OnInit {
 
    scrollToBottom() {
     this.container.nativeElement.scrollTop = this.container.nativeElement.scrollHeight;
-}
+} */
 
 const ()
 {
@@ -125,5 +126,5 @@ const6 ()
 {
   var message1=document.getElementById("ms") as HTMLInputElement;
   message1.value="O(n!)";
-}*/
+}
 }
