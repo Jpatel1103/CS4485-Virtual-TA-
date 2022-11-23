@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ElementRef, ViewChild, Directive, Input, } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef, ViewChild, } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
@@ -92,39 +92,33 @@ export class AppComponent implements OnInit {
     this.container.nativeElement.scrollTop = this.container.nativeElement.scrollHeight;
 } */
 
-const ()
+const0()
 {
   var message1=document.getElementById("ms") as HTMLInputElement;
-  message1.value="O(1)";
+  message1.value+="²";
 }
+
 const1 ()
 {
-  var message1=document.getElementById("ms") as HTMLInputElement;
-  message1.value="O(logn)";
+  var message2=document.getElementById("ms") as HTMLInputElement;
+  message2.value+="³";
 }
 const2 ()
 {
   var message1=document.getElementById("ms") as HTMLInputElement;
-  message1.value="O(n)";
+  message1.value+="√";
 }
+
 const3 ()
 {
   var message1=document.getElementById("ms") as HTMLInputElement;
-  message1.value="O(nlogn)";
+  message1.value+="³√";
 }
+
 const4 ()
 {
   var message1=document.getElementById("ms") as HTMLInputElement;
-  message1.value="O(n*n)";
+  message1.value+="!";
 }
-const5 ()
-{
-  var message1=document.getElementById("ms") as HTMLInputElement;
-  message1.value="O(n*n*n)";
-}
-const6 ()
-{
-  var message1=document.getElementById("ms") as HTMLInputElement;
-  message1.value="O(n!)";
-}
+
 }
