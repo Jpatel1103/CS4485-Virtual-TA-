@@ -15,31 +15,27 @@
                 </div>
             </div>-->
           <div class="whole">
-              <button (click)="dropup = !dropup" class="eqclick">
-                <img src="../assets/image/formula.png">
-                </button>
-                <div *ngIf= "dropup"class="dropup">
-                <button id="btn1" (click)="const()" style="border: none;"> 
-                <a href="#" id="constant"> O(1) </a><br>
+                <button class="eqclick">
+                  <img src="../assets/formula.png">
+                  </button>
+                  <div class="dropup">
+                  <button id="btn1" style="border: none;" (click)="const0()"> 
+                    <a href="#">n²</a><br>
                 </button><br>
-                <button id="btn2" (click)="const1()" style="border: none;">
-                <a href="#" id="log"> O(log n)</a><br>
-            </button><br>
-                <button id="btn3" (click)="const2()" style="border: none;">
-                <a href="#" id="lin"> O(n) </a><br>
+                  <button id="btn2" (click)="const1()" style="border: none;">
+                  <a href="#"> n³</a><br>
+              </button><br>
+              <button id="btn3" (click)="const2()" style="border: none;">
+                <a href="#"> √ </a><br>
             </button><br>
             <button id="btn4" (click)="const3()" style="border: none;">
-                <a href="#" id="lina"> O(n log n)</a><br>
+                <a href="#"> ³√ </a> <br>
+
             </button><br>
             <button id="btn5" (click)="const4()" style="border: none;">
-                <a href="#" id="quad"> O(n*n) </a><br>
-            </button><br>
-            <button id="btn6" (click)="const5()" style="border: none;">
-                <a href="#" id="cubic"> O(n*n*n)</a><br>
-            </button><br>
-            <button id="btn7" (click)="const6()" style="border: none;">
-                <a href="#" id="fact"> O(n!) </a><br>
-            </button><br>
+                <a href="#"> n! </a> <br>
+            </button>
+               <br>
             </div>
               </div>
            <!---- <form (ngSubmit) ="handleUserMessage(message)" id="send" class="chat-input" autocomplete="off">
