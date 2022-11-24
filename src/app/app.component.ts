@@ -92,7 +92,7 @@ export class AppComponent implements OnInit {
     this.container.nativeElement.scrollTop = this.container.nativeElement.scrollHeight;
 } */
 
-const0()
+/*const0()
 {
   var message1=document.getElementById("ms") as HTMLInputElement;
   message1.value+="²";
@@ -120,5 +120,5 @@ const4 ()
   var message1=document.getElementById("ms") as HTMLInputElement;
   message1.value+="!";
 }
-
+*/
 }
