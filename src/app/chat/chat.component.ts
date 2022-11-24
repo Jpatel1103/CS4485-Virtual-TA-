@@ -65,5 +65,37 @@ export class ChatComponent implements OnInit {
     if(event.keyCode == 13 && this.textInput.trim() != ''){
       this.sendMessage();
     }
-  } 
+  }
+  
+  const0()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value+="²";
+}
+
+const1 ()
+{
+  var message2=document.getElementById("ms") as HTMLInputElement;
+  message2.value+="³";
+}
+const2 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value+="√";
+}
+
+const3 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value+="³√";
+}
+
+const4 ()
+{
+  var message1=document.getElementById("ms") as HTMLInputElement;
+  message1.value+="!";
+}
+
+
+
 }
