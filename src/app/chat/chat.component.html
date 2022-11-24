@@ -5,8 +5,32 @@
       [ngClass]="{'left-message': !message.userOwner, 'right-message': message.userOwner}"></app-message>
     </div>
   </div>
+  <div class="whole">
+                    <button class="eqclick">
+                      <img src="../assets/image/formula.png" id="formula">
+                      </button>
+                      <div class="dropup">
+                      <button id="btn1" style="border: none;" (click)="const0()"> 
+                        <a href="#">n²</a><br>
+                    </button><br>
+                      <button id="btn2" (click)="const1()" style="border: none;">
+                      <a href="#"> n³</a><br>
+                  </button><br>
+                  <button id="btn3" (click)="const2()" style="border: none;">
+                    <a href="#"> √ </a><br>
+                </button><br>
+                <button id="btn4" (click)="const3()" style="border: none;">
+                    <a href="#"> ³√ </a> <br>
+    
+                </button><br>
+                <button id="btn5" (click)="const4()" style="border: none;">
+                    <a href="#"> n! </a> <br>
+                </button>
+                   <br>
+                </div>
+                  </div>
   <div class="input-message form-group">
-    <textarea class="input-text-message form-input" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"></textarea>
+    <textarea class="input-text-message form-input" id="ms" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"></textarea>
     <button [disabled]="!textInput" class="input-send" (click)="sendMessage()">
       <img src="../assets/image/send.png" alt="send-button">
     </button>
