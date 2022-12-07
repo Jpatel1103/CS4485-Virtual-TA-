@@ -30,8 +30,9 @@
                 </div>
                   </div>
   <div class="input-message form-group">
-    <textarea class="input-text-message form-input" id="ms" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"></textarea>
-    <button [disabled]="!textInput" class="input-send" (click)="sendMessage()">
+    <textarea  class="input-text-message form-input" id="ms" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"></textarea>
+    <button [disabled]="!textInput" id="button" class="input-send" (click)="sendMessage()">
       <img src="../assets/image/send.png" alt="send-button">
     </button>
-  </div>  
+  </div> 
+

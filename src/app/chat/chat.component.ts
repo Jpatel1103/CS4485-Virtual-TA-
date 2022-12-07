@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { ChatService } from './chat.service';
 import { Message } from '../model/message.model';
 import { TextMessage } from '../model/text-message.model';
 import { ResponseMessage } from '../model/response-message.model';
 import { environment } from 'src/environments/environment';
+import { KatexModule } from 'ng-katex';
 import { delay } from 'rxjs';
 @Component({
   selector: 'app-chat',
@@ -24,6 +25,11 @@ export class ChatComponent implements OnInit {
   minute: string;
   now: string;
 
+  repeat = true;
+  greetMsg1 ="Hello, I am UTD Virtual TA chatbot for the Advanced Algorithm course."
+  greetMsg2 ="I can answer basic course-related questions like algorithm' run time and definition"
+  greetMsg3 ="How can I help you today?"
+
   constructor(private chatService: ChatService) {
     setInterval(() => {
       this.hour = new Date().toString().split(' ')[4].split(':')[0];
@@ -37,9 +43,27 @@ export class ChatComponent implements OnInit {
       else 
       this.now = (parseInt(this.hour)-12) +':' +this.minute +" PM";
     }, 1);
+
   }
 
-  ngOnInit() {
+  ngOnInit():void{
+    this.greeting();
+  }
+  greeting(){
+    if( this.repeat = true){
+    let greetMessage1: Message = { text: this.greetMsg1, date: this.now, userOwner: false, name: "Bot"}
+    setTimeout(()=>{                           // <<<---using ()=> syntax
+      this.messages.push(greetMessage1);
+  }, 2000);
+    let greetMessage2: Message = { text: this.greetMsg2, date: this.now, userOwner: false, name: "Bot"}
+    setTimeout(()=>{                           // <<<---using ()=> syntax
+      this.messages.push(greetMessage2);
+  }, 4000);
+    let greetMessage3: Message = { text: this.greetMsg3, date: this.now, userOwner: false, name: "Bot"}
+    setTimeout(()=>{                           // <<<---using ()=> syntax
+      this.messages.push(greetMessage3);
+  }, 6000); 
+    this.repeat = false}
   }
 
   sendMessage(){
@@ -95,7 +119,6 @@ const4 ()
   var message1=document.getElementById("ms") as HTMLInputElement;
   message1.value+="!";
 }
-
 
 
 }
